@@ -1,3 +1,17 @@
+## Changes in version 2.28.4
+
+### New features
+
+* The `RNAseq2Norm` argument in `getFirehoseData` allows additional
+options: "RSEM_normalized_log2", "raw_counts", "scaled_estimate" from the
+'preprocessed' tarballs in Firehose. The "normalized_counts" default remains.
+
+### Bug fixes and minor improvements
+
+* `getFirehoseData` when used with the `miRNASeqGene` argument will
+download read counts. Use the "reads_per_million_miRNA_mapped" in the
+`miRNASeqGeneType` to obtain RPM.
+
 ## Changes in version 2.28.0
 
 ### New features
@@ -14,9 +28,6 @@ type checking, and set row names when the are not duplicated.
 * Clean up class membership checks, e.g., with `is(x, "classname")`
 * Set missing rows to `""` for downstream compatibility with
 `SummarizedExperiment`.
-* `getFirehoseData` when used with the `miRNASeqGene` argument will
-download read counts. Use the "reads_per_million_miRNA_mapped" in the
-`miRNASeqGeneType` to obtain RPM.
 
 ## Changes in version 2.24.0
 
