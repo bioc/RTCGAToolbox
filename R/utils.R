@@ -417,7 +417,7 @@
             names.field = names.field), ansRanges)
     )
     if (!is.null(build))
-        GenomeInfoDb::genome(rowRanges) <- build
+        Seqinfo::genome(rowRanges) <- build
     ## All row ranges the same, take first one
     newSE <- SummarizedExperiment(assays = SimpleList(countList),
         rowRanges = rowRanges[[1L]])
@@ -457,7 +457,7 @@
     newGRL <- do.call(.makeGRangesListFromDataFrame,
         args = c(list(df = df, keep.extra.columns = TRUE), rangeInfo))
     if (!is.null(build))
-        GenomeInfoDb::genome(newGRL) <- build
+        Seqinfo::genome(newGRL) <- build
     newRE <- RaggedExperiment::RaggedExperiment(newGRL)
     metadata(newRE) <- metadat
     return(newRE)
@@ -487,7 +487,7 @@
     newgr <- do.call(GenomicRanges::makeGRangesFromDataFrame,
         args = c(list(df = df, keep.extra.columns = TRUE), ansRanges))
     if (!is.null(build))
-        GenomeInfoDb::genome(newgr) <- build
+        Seqinfo::genome(newgr) <- build
     metadata(newgr) <- metadat
     return(newgr)
 }

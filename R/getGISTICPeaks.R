@@ -13,7 +13,7 @@
 #' @return A `data.frame` of peak values
 #'
 #' @importFrom GenomicRanges seqnames order
-#' @importFrom GenomeInfoDb orderSeqlevels seqlevels seqlevels<-
+#' @importFrom Seqinfo orderSeqlevels seqlevels seqlevels<-
 #' @importFrom methods as
 #'
 #' @author Ludwig Geistlinger

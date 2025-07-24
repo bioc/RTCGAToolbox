@@ -32,7 +32,7 @@ bioc_packages:
   - BiocGenerics
   - Biobase
   - GenomicRanges
-  - GenomeInfoDb
+  - Seqinfo
   - IRanges
   - limma
   - RaggedExperiment
